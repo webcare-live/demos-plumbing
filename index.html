@@ -1,0 +1,88 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Plumbing Website Demos</title>
+    <link rel="stylesheet" href="gallery/gallery.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="container hero-card">
+        <div class="hero-content">
+          <p class="eyebrow">Plumbing demo gallery</p>
+          <h1>Plumbing Website Demos</h1>
+          <p class="hero-lead">
+            Browse every concept in one place. Scroll inside any thumbnail to preview the full site.
+          </p>
+        </div>
+        <div class="hero-panel">
+          <div class="panel-title">Quick tip</div>
+          <p>Hover a thumbnail and use your mouse wheel to scroll the screenshot.</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="grid" id="demo-grid" aria-live="polite"></section>
+      <div class="status" id="status" role="status"></div>
+      <noscript class="status">Enable JavaScript to view the gallery cards.</noscript>
+    </main>
+
+    <script type="module">
+      const grid = document.getElementById('demo-grid');
+      const status = document.getElementById('status');
+      const path = window.location.pathname || '/';
+
+      const basePath = (() => {
+        let base = path.endsWith('/') ? path : path.replace(/[^/]*$/, '');
+        if (!base.endsWith('/')) base += '/';
+        return base;
+      })();
+
+      const toLiveUrl = (slug) => `${basePath}${slug}/`;
+      const buildCard = (demo, index) => {
+        const card = document.createElement('article');
+        card.className = 'card';
+        card.style.animationDelay = `${index * 60}ms`;
+
+        const tags = Array.isArray(demo.tags)
+          ? demo.tags.map((tag) => `<li class="tag">${tag}</li>`).join('')
+          : '';
+
+        card.innerHTML = `
+          <div class="card-media">
+            <div class="thumb-scroll">
+              <img src="${demo.thumb}" alt="${demo.title} thumbnail" loading="lazy" />
+            </div>
+          </div>
+          <h2 class="card-title">${demo.title}</h2>
+          <p class="card-desc">${demo.description || ''}</p>
+          <ul class="card-tags">${tags}</ul>
+          <div class="card-actions">
+            <a class="button primary" href="${toLiveUrl(demo.slug)}" target="_blank" rel="noreferrer">Live Demo</a>
+          </div>
+        `;
+
+        return card;
+      };
+
+      fetch('gallery/demos.json', { cache: 'no-store' })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`Unable to load demos.json (${response.status}).`);
+          }
+          return response.json();
+        })
+        .then((demos) => {
+          grid.innerHTML = '';
+          demos.forEach((demo, index) => grid.appendChild(buildCard(demo, index)));
+          status.textContent = '';
+        })
+        .catch((error) => {
+          console.error(error);
+          status.textContent = 'Unable to load demos. Run a local server (see README) to preview.';
+        });
+    </script>
+  </body>
+</html>

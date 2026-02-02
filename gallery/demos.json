@@ -1,0 +1,82 @@
+﻿[
+  {
+    "id": "demo-01",
+    "slug": "demo-01",
+    "title": "Plumbing Demo 01 — Modern Hero",
+    "description": "Single-page layout with 24/7 emergency focus, service highlights, reviews, and a quick quote form.",
+    "tags": ["single-page", "emergency", "quote-form"],
+    "thumb": "gallery/thumbs/demo-01.png"
+  },
+  {
+    "id": "demo-02",
+    "slug": "demo-02",
+    "title": "Plumbing Demo 02 — Emergency Focus",
+    "description": "Multi-page site with services, promotions, reviews, FAQs, and service-area coverage.",
+    "tags": ["multi-page", "services", "reviews"],
+    "thumb": "gallery/thumbs/demo-02.png"
+  },
+  {
+    "id": "demo-03",
+    "slug": "demo-03",
+    "title": "Plumbing Demo 03 — Premium Multi-Page",
+    "description": "Premium multi-page site with case studies, care plans, pricing, and a booking flow.",
+    "tags": ["premium", "multi-page", "case-studies"],
+    "thumb": "gallery/thumbs/demo-03.png"
+  },
+  {
+    "id": "demo-04",
+    "slug": "demo-04",
+    "title": "Plumbing Demo 04 — Commercial Services",
+    "description": "Showcase-style multi-page site with bathroom support, fixture installs, commercial services, and case studies.",
+    "tags": ["multi-page", "showcase", "case-studies"],
+    "thumb": "gallery/thumbs/demo-04.png"
+  },
+  {
+    "id": "demo-05",
+    "slug": "demo-05",
+    "title": "Plumbing Demo 05 — Eco Efficient",
+    "description": "Sustainability focus with water-saving upgrades and rebates.",
+    "tags": ["eco", "savings", "smart"],
+    "thumb": "gallery/thumbs/demo-05.png"
+  },
+  {
+    "id": "demo-06",
+    "slug": "demo-06",
+    "title": "Plumbing Demo 06 — Luxury Bath",
+    "description": "Premium remodel showcase with gallery and concierge booking.",
+    "tags": ["remodel", "premium", "showcase"],
+    "thumb": "gallery/thumbs/demo-06.png"
+  },
+  {
+    "id": "demo-07",
+    "slug": "demo-07",
+    "title": "Plumbing Demo 07 — Drain Experts",
+    "description": "Before/after proof with video-friendly layout and FAQ.",
+    "tags": ["drain", "before-after", "video"],
+    "thumb": "gallery/thumbs/demo-07.png"
+  },
+  {
+    "id": "demo-08",
+    "slug": "demo-08",
+    "title": "Plumbing Demo 08 — Service Plans",
+    "description": "Membership tiers, benefits, and auto-renew reminders.",
+    "tags": ["membership", "pricing", "benefits"],
+    "thumb": "gallery/thumbs/demo-08.png"
+  },
+  {
+    "id": "demo-09",
+    "slug": "demo-09",
+    "title": "Plumbing Demo 09 — HVAC + Plumbing",
+    "description": "Bundled services with seasonal promotions and savings.",
+    "tags": ["multi-service", "bundles", "seasonal"],
+    "thumb": "gallery/thumbs/demo-09.png"
+  },
+  {
+    "id": "demo-10",
+    "slug": "demo-10",
+    "title": "Plumbing Demo 10 — Minimal Booking",
+    "description": "Clean booking flow with calendar-first scheduling.",
+    "tags": ["minimal", "booking", "calendar"],
+    "thumb": "gallery/thumbs/demo-10.png"
+  }
+]

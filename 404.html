@@ -1,0 +1,51 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page not found</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f6f1ea;
+        color: #1c2a2e;
+      }
+      .wrap {
+        max-width: 720px;
+        margin: 12vh auto;
+        padding: 0 20px;
+        text-align: center;
+      }
+      a {
+        color: #e56b2f;
+        text-decoration: none;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      (function () {
+        var path = window.location.pathname || '';
+        var base = '/demos-plumbing/';
+        if (path.indexOf(base) === 0) {
+          var restPath = path.slice(base.length);
+          var match = restPath.match(/^(demo-\d{2})\/?(.*)$/);
+          if (match) {
+            var demo = match[1];
+            var rest = (match[2] || '').replace(/^\/+/, '');
+            var target = base + demo + '/' + (rest ? '#/' + rest : '');
+            window.location.replace(target);
+            return;
+          }
+        }
+      })();
+    </script>
+    <div class="wrap">
+      <h1>Page not found</h1>
+      <p>The page you requested does not exist.</p>
+      <p><a href="/demos-plumbing/">Back to gallery</a></p>
+    </div>
+  </body>
+</html>
