@@ -238,7 +238,22 @@
 </div>
 <script>
   (function () {
-    var key = 'td_support_prompt_seen_v1';
+    var demoId = (function () {
+      var path = window.location.pathname || '';
+      var parts = path.split('/').filter(Boolean);
+      for (var i = 0; i < parts.length; i += 1) {
+        if (/^demo-d{2}$/i.test(parts[i])) {
+          return parts[i];
+        }
+      }
+      return '';
+    })();
+
+    if (!demoId) {
+      return;
+    }
+
+    var key = 'td_support_prompt_seen_v1:' + demoId;
     try {
       if (window.localStorage && window.localStorage.getItem(key)) {
         return;
