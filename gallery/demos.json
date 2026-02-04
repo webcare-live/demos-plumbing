@@ -42,9 +42,9 @@
   {
     "id": "demo-06",
     "slug": "demo-06",
-    "title": "Plumbing Demo 06 — Luxury Bath",
-    "description": "Premium remodel showcase with gallery and concierge booking.",
-    "tags": ["remodel", "premium", "showcase"],
+    "title": "Plumbing Demo 06 — Full Service Suite",
+    "description": "Large multi-page site with service deep dives, care plans, and financing.",
+    "tags": ["multi-page", "financing", "care-plans"],
     "thumb": "gallery/thumbs/demo-06.png"
   },
   {
