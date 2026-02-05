@@ -1,0 +1,291 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Multi-page Plumbing Website</title>
+      <script type="module" crossorigin src="/demos-plumbing/demo-08/assets/index-D0stgGsu.js"></script>
+      <link rel="stylesheet" crossorigin href="/demos-plumbing/demo-08/assets/index-BJlIsHvG.css">
+    </head>
+
+    <body>
+      <div id="root"></div>
+    <!-- ThriveDesk Assistant -->
+<script>
+  (!(function (t, e, n) {
+    function s() {
+      var t = e.getElementsByTagName("script")[0],
+        n = e.createElement("script");
+      ((n.type = "text/javascript"),
+        (n.async = !0),
+        (n.src =
+          "https://assistant.thrivedesk.com/bootloader.js?" + Date.now()),
+        t.parentNode.insertBefore(n, t));
+    }
+    if (
+      ((t.Assistant = n =
+        function (e, n, s) {
+          t.Assistant.readyQueue.push({ method: e, options: n, data: s });
+        }),
+      (n.readyQueue = []),
+      "complete" === e.readyState)
+    )
+      return s();
+    t.attachEvent
+      ? t.attachEvent("onload", s)
+      : t.addEventListener("load", s, !1);
+  })(window, document, window.Assistant || function () {}),
+    window.Assistant("init", "94e24433-2a22-4d57-ac47-0326fde9cb0d"));
+</script>
+
+<!-- /ThriveDesk Assistant -->
+<!-- ThriveDesk Prompt -->
+<style>
+  .td-support-prompt {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+    transition: opacity 0.4s ease;
+  }
+
+  .td-support-prompt.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .td-support-prompt__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(3px);
+  }
+
+  .td-support-prompt__card {
+    position: relative;
+    width: min(360px, 92vw);
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    box-shadow: 0 30px 70px rgba(15, 23, 42, 0.3);
+    padding: 18px 18px 16px;
+    transform: translateY(12px) scale(0.95);
+    transition: transform 0.45s ease;
+    animation: td-prompt-glow 2.8s ease-in-out infinite;
+  }
+
+  .td-support-prompt.is-visible .td-support-prompt__card {
+    transform: translateY(0) scale(1);
+    animation: td-prompt-pop 0.6s ease, td-prompt-glow 2.8s ease-in-out infinite;
+  }
+
+  .td-support-prompt__pulse {
+    position: absolute;
+    inset: -14px;
+    border-radius: 24px;
+    border: 2px solid rgba(37, 99, 235, 0.35);
+    animation: td-prompt-pulse 2.6s ease-out infinite;
+    pointer-events: none;
+  }
+
+  .td-support-prompt__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .td-support-prompt__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.12);
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+
+  .td-support-prompt__title {
+    font-size: 18px;
+    font-weight: 800;
+    margin: 12px 0 6px;
+  }
+
+  .td-support-prompt__text {
+    font-size: 14px;
+    line-height: 1.45;
+    margin: 0 0 14px;
+    color: #475569;
+  }
+
+  .td-support-prompt__actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .td-support-prompt__button {
+    appearance: none;
+    border: none;
+    border-radius: 999px;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .td-support-prompt__button--primary {
+    background: #2563eb;
+    color: #ffffff;
+    box-shadow: 0 12px 24px rgba(37, 99, 235, 0.3);
+  }
+
+  .td-support-prompt__button--ghost {
+    background: transparent;
+    color: #64748b;
+  }
+
+  .td-support-prompt__close {
+    appearance: none;
+    border: none;
+    background: transparent;
+    color: #94a3b8;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  @keyframes td-prompt-pop {
+    0% { transform: translateY(18px) scale(0.9); }
+    60% { transform: translateY(-4px) scale(1.02); }
+    100% { transform: translateY(0) scale(1); }
+  }
+
+  @keyframes td-prompt-glow {
+    0%, 100% { box-shadow: 0 24px 60px rgba(15, 23, 42, 0.28); }
+    50% { box-shadow: 0 30px 70px rgba(37, 99, 235, 0.35); }
+  }
+
+  @keyframes td-prompt-pulse {
+    0% { transform: scale(0.98); opacity: 0.8; }
+    70% { transform: scale(1.08); opacity: 0; }
+    100% { opacity: 0; }
+  }
+</style>
+<div class="td-support-prompt" data-td-support-prompt>
+  <div class="td-support-prompt__backdrop" data-td-support-backdrop></div>
+  <div class="td-support-prompt__card">
+    <div class="td-support-prompt__pulse"></div>
+    <div class="td-support-prompt__header">
+      <span class="td-support-prompt__badge">Chatlive</span>
+      <button class="td-support-prompt__close" type="button" data-td-support-close aria-label="Dismiss">×</button>
+    </div>
+    <p class="td-support-prompt__title">Want this customized?</p>
+    <p class="td-support-prompt__text">We can tailor this demo for your plumbing business. Jump into chat for a fast quote.</p>
+    <div class="td-support-prompt__actions">
+      <button class="td-support-prompt__button td-support-prompt__button--primary" type="button" data-td-support-open>Chat now</button>
+      <button class="td-support-prompt__button td-support-prompt__button--ghost" type="button" data-td-support-later>Not now</button>
+    </div>
+  </div>
+</div>
+<script>
+  (function () {
+    var demoId = (function () {
+      var path = window.location.pathname || '';
+      var parts = path.split('/').filter(Boolean);
+      for (var i = 0; i < parts.length; i += 1) {
+        if (/^demo-\d{2}$/i.test(parts[i])) {
+          return parts[i];
+        }
+      }
+      return '';
+    })();
+
+    if (!demoId) {
+      return;
+    }
+
+    var key = 'td_support_prompt_seen_v1:' + demoId;
+    try {
+      if (window.localStorage && window.localStorage.getItem(key)) {
+        return;
+      }
+    } catch (e) {
+      // Ignore storage errors (private mode, etc.)
+    }
+
+    var prompt = document.querySelector('[data-td-support-prompt]');
+    if (!prompt) return;
+
+    var removePrompt = function () {
+      if (prompt && prompt.parentNode) {
+        prompt.parentNode.removeChild(prompt);
+      }
+    };
+
+    var showPrompt = function () {
+      prompt.classList.add('is-visible');
+      try {
+        if (window.localStorage) {
+          window.localStorage.setItem(key, String(Date.now()));
+        }
+      } catch (e) {
+        // Ignore storage errors.
+      }
+      window.setTimeout(removePrompt, 14000);
+    };
+
+    var openAssistant = function () {
+      try {
+        if (window.Assistant) {
+          window.Assistant('open');
+          window.Assistant('show');
+        }
+      } catch (e) {
+        // Ignore if API not ready.
+      }
+    };
+
+    var openButton = prompt.querySelector('[data-td-support-open]');
+    var laterButton = prompt.querySelector('[data-td-support-later]');
+    var closeButton = prompt.querySelector('[data-td-support-close]');
+    var backdrop = prompt.querySelector('[data-td-support-backdrop]');
+
+    if (openButton) {
+      openButton.addEventListener('click', function () {
+        openAssistant();
+        removePrompt();
+      });
+    }
+
+    if (laterButton) {
+      laterButton.addEventListener('click', removePrompt);
+    }
+
+    if (closeButton) {
+      closeButton.addEventListener('click', removePrompt);
+    }
+
+    if (backdrop) {
+      backdrop.addEventListener('click', removePrompt);
+    }
+
+    window.setTimeout(showPrompt, 7000);
+  })();
+</script>
+<!-- /ThriveDesk Prompt -->
+</body>
+  </html>
+  

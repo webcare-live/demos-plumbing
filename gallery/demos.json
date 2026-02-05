@@ -58,9 +58,9 @@
   {
     "id": "demo-08",
     "slug": "demo-08",
-    "title": "Plumbing Demo 08 — Service Plans",
-    "description": "Membership tiers, benefits, and auto-renew reminders.",
-    "tags": ["membership", "pricing", "benefits"],
+    "title": "Plumbing Demo 08 — Metro Multi-Page",
+    "description": "Large service catalog with membership, service areas, and booking flow.",
+    "tags": ["multi-page", "membership", "booking"],
     "thumb": "gallery/thumbs/demo-08.png"
   },
   {
