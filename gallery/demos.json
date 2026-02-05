@@ -74,9 +74,9 @@
   {
     "id": "demo-10",
     "slug": "demo-10",
-    "title": "Plumbing Demo 10 — Minimal Booking",
-    "description": "Clean booking flow with calendar-first scheduling.",
-    "tags": ["minimal", "booking", "calendar"],
+    "title": "Plumbing Demo 10 — Riverstone Precision",
+    "description": "Precision-focused multi-page site with rapid-quote intake, membership plans, and service deep dives.",
+    "tags": ["multi-page", "rapid-quote", "membership"],
     "thumb": "gallery/thumbs/demo-10.png"
   }
 ]
