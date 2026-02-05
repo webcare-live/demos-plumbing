@@ -66,9 +66,9 @@
   {
     "id": "demo-09",
     "slug": "demo-09",
-    "title": "Plumbing Demo 09 — HVAC + Plumbing",
-    "description": "Bundled services with seasonal promotions and savings.",
-    "tags": ["multi-service", "bundles", "seasonal"],
+    "title": "Plumbing Demo 09 — Modern HVAC + Plumbing",
+    "description": "Multi-service layout with deep service pages, care plan, and case studies.",
+    "tags": ["multi-service", "multi-page", "care-plan"],
     "thumb": "gallery/thumbs/demo-09.png"
   },
   {
